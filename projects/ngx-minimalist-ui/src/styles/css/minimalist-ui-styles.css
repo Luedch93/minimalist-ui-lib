@@ -1,5 +1,27 @@
-lib-ngx-minimalist-ui {
+lib-ngx-minimalist-button {
   font-family: "Josefin Sans", sans-serif;
+}
+lib-ngx-minimalist-button div {
+  border: solid black 2px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 17px;
+  background-color: #daf5ff;
+  position: relative;
+}
+lib-ngx-minimalist-button div::after {
+  content: "";
+  border: solid black 2px;
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  bottom: -7px;
+  left: 2px;
+  height: 100%;
+  display: block;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=minimalist-ui-styles.css.map */
