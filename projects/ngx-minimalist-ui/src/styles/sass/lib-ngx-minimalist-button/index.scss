@@ -5,12 +5,12 @@ lib-ngx-minimalist-button {
   div.minimalist-button {
     cursor: pointer;
     position: relative;
+    @include no-selection();
 
     div.minimalist-button-front {
-      border: solid black 2px;
+      @include border(2px);
       padding: 15px 0;
       text-align: center;
-      border-radius: 9px;
       font-size: 17px;
       background-color: #daf5ff;
       &:hover {
@@ -22,8 +22,7 @@ lib-ngx-minimalist-button {
     }
 
     div.minimalist-button-back {
-      border: solid black 2px;
-      border-radius: 9px;
+      @include border(2px);
       position: absolute;
       width: 100%;
       bottom: -6px;
