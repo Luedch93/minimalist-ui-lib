@@ -2,24 +2,32 @@
 
 lib-ngx-minimalist-button {
   @include font();
-  div {
-    border: solid black 2px;
-    padding: 15px 0;
-    text-align: center;
-    border-radius: 9px;
+  div.minimalist-button {
     cursor: pointer;
-    font-size: 17px;
-    background-color: #daf5ff;
     position: relative;
 
-    &::after {
-      content: "";
+    div.minimalist-button-front {
+      border: solid black 2px;
+      padding: 15px 0;
+      text-align: center;
+      border-radius: 9px;
+      font-size: 17px;
+      background-color: #daf5ff;
+      &:hover {
+        transform: translate(1px, 1px);
+      }
+      &:active {
+        transform: translate(3px, 3px);
+      }
+    }
+
+    div.minimalist-button-back {
       border: solid black 2px;
       border-radius: 9px;
       position: absolute;
       width: 100%;
-      bottom: -7px;
-      left: 2px;
+      bottom: -6px;
+      left: 3px;
       height: 100%;
       display: block;
       z-index: -1;
