@@ -1,0 +1,7 @@
+@mixin font {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+lib-ngx-minimalist-ui {
+  @include font();
+}
