@@ -3,3 +3,4 @@
  */
 
 export * from './lib/ngx-minimalist-button';
+export * from './lib/ngx-minimalist-summary';

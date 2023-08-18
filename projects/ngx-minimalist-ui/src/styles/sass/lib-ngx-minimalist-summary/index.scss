@@ -1,0 +1,25 @@
+@import "../mixins";
+
+lib-ngx-minimalist-summary {
+  @include font();
+  .minimalist-summary {
+    @include border(2px);
+    overflow: hidden;
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px;
+
+      &:not(.minimalist-summary-total):not(:nth-last-child(2)) {
+        border-bottom: 1px dashed black;
+      }
+    }
+
+    &-total {
+      background-color: #def5e5;
+      border-top: 2px solid black;
+      font-weight: bold;
+    }
+  }
+}

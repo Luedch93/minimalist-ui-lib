@@ -13,4 +13,13 @@
       </lib-ngx-minimalist-button>
     </app-container>
   </section>
+
+  <section id="summary">
+    <app-container [title]="'Summary'">
+      <lib-ngx-minimalist-summary
+        [summaryList]="products"
+        [currencyCode]="currency"
+      ></lib-ngx-minimalist-summary>
+    </app-container>
+  </section>
 </main>

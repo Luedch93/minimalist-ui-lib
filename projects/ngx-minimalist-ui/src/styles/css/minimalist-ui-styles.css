@@ -37,4 +37,29 @@ lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-back {
   z-index: -1;
 }
 
+lib-ngx-minimalist-summary {
+  font-family: "Josefin Sans", sans-serif;
+}
+lib-ngx-minimalist-summary .minimalist-summary {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+lib-ngx-minimalist-summary .minimalist-summary-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+lib-ngx-minimalist-summary .minimalist-summary-item:not(.minimalist-summary-total):not(:nth-last-child(2)) {
+  border-bottom: 1px dashed black;
+}
+lib-ngx-minimalist-summary .minimalist-summary-total {
+  background-color: #def5e5;
+  border-top: 2px solid black;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=minimalist-ui-styles.css.map */
