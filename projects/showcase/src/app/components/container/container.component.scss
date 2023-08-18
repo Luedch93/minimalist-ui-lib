@@ -1,0 +1,15 @@
+.container {
+  border: dashed black 1px;
+  border-radius: 9px;
+  padding: 30px;
+  position: relative;
+
+  &-title {
+    position: absolute;
+    background-color: white;
+    font-size: 20px;
+    top: -30px;
+    left: 20px;
+    padding: 0 5px;
+  }
+}

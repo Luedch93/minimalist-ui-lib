@@ -1,1 +1,16 @@
-<lib-ngx-minimalist-button> Hello World </lib-ngx-minimalist-button>
+<main>
+  <header>
+    <h1>Minimalist UI showcase</h1>
+  </header>
+
+  <section id="button">
+    <app-container [title]="'Button'">
+      <lib-ngx-minimalist-button
+        (click)="logEvent($event)"
+        [backgroundColor]="backgroundColor"
+      >
+        Hello World
+      </lib-ngx-minimalist-button>
+    </app-container>
+  </section>
+</main>

@@ -16,13 +16,12 @@ lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front {
   padding: 15px 0;
   text-align: center;
   font-size: 17px;
-  background-color: #daf5ff;
 }
 lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front:hover {
   transform: translate(1px, 1px);
 }
 lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front:active {
-  transform: translate(3px, 3px);
+  transform: translate(3px, 2px);
 }
 lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-back {
   border-color: black;

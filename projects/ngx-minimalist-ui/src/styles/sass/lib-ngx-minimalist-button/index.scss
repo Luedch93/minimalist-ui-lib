@@ -12,12 +12,11 @@ lib-ngx-minimalist-button {
       padding: 15px 0;
       text-align: center;
       font-size: 17px;
-      background-color: #daf5ff;
       &:hover {
         transform: translate(1px, 1px);
       }
       &:active {
-        transform: translate(3px, 3px);
+        transform: translate(3px, 2px);
       }
     }
 
