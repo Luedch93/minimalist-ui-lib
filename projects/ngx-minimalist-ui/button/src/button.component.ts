@@ -1,8 +1,8 @@
 import { Component, Input, ViewEncapsulation, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-minimalist-button',
-  templateUrl: './ngx-minimalist-button.component.html',
+  selector: 'lib-minimalist-button',
+  templateUrl: './button.component.html',
   encapsulation: ViewEncapsulation.None,
 })
 export class NgxMinimalistButtonComponent implements OnChanges {

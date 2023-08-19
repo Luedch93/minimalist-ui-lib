@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxMinimalistButtonComponent } from './ngx-minimalist-button.component';
+import { NgxMinimalistButtonComponent } from './button.component';
 
 describe('NgxMinimalistButtonComponent', () => {
   let component: NgxMinimalistButtonComponent;
@@ -8,7 +8,7 @@ describe('NgxMinimalistButtonComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NgxMinimalistButtonComponent]
+      declarations: [NgxMinimalistButtonComponent],
     });
     fixture = TestBed.createComponent(NgxMinimalistButtonComponent);
     component = fixture.componentInstance;

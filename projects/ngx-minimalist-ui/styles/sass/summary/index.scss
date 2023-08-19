@@ -1,6 +1,6 @@
 @import "../mixins";
 
-lib-ngx-minimalist-summary {
+lib-minimalist-summary {
   @include font();
   .minimalist-summary {
     @include border(2px);

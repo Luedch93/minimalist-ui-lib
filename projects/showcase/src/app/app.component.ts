@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SummaryList } from 'ngx-minimalist-ui';
+import { SummaryList } from 'ngx-minimalist-ui/summary';
 
 @Component({
   selector: 'app-root',

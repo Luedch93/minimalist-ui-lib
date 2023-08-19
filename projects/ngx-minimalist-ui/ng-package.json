@@ -2,9 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-minimalist-ui",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "public-api.ts"
   },
-  "assets": [
-    { "input": "src/styles/css", "glob": "**/*.css", "output": "styles" }
-  ]
+  "assets": [{ "input": "styles/css", "glob": "**/*.css", "output": "styles" }]
 }

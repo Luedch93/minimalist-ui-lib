@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxMinimalistSummaryComponent } from './ngx-minimalist-summary.component';
+import { NgxMinimalistSummaryComponent } from './summary.component';
 
 describe('NgxMinimalistSummaryComponent', () => {
   let component: NgxMinimalistSummaryComponent;
@@ -8,7 +8,7 @@ describe('NgxMinimalistSummaryComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NgxMinimalistSummaryComponent]
+      declarations: [NgxMinimalistSummaryComponent],
     });
     fixture = TestBed.createComponent(NgxMinimalistSummaryComponent);
     component = fixture.componentInstance;

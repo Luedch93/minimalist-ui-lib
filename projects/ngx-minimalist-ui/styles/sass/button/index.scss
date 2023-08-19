@@ -1,6 +1,6 @@
 @import "../mixins/index.scss";
 
-lib-ngx-minimalist-button {
+lib-minimalist-button {
   @include font();
   div.minimalist-button {
     cursor: pointer;

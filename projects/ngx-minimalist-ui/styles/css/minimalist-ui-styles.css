@@ -1,14 +1,14 @@
-lib-ngx-minimalist-button {
+lib-minimalist-button {
   font-family: "Josefin Sans", sans-serif;
 }
-lib-ngx-minimalist-button div.minimalist-button {
+lib-minimalist-button div.minimalist-button {
   cursor: pointer;
   position: relative;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front {
+lib-minimalist-button div.minimalist-button div.minimalist-button-front {
   border-color: black;
   border-style: solid;
   border-width: 2px;
@@ -17,13 +17,13 @@ lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front {
   text-align: center;
   font-size: 17px;
 }
-lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front:hover {
+lib-minimalist-button div.minimalist-button div.minimalist-button-front:hover {
   transform: translate(1px, 1px);
 }
-lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-front:active {
+lib-minimalist-button div.minimalist-button div.minimalist-button-front:active {
   transform: translate(3px, 2px);
 }
-lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-back {
+lib-minimalist-button div.minimalist-button div.minimalist-button-back {
   border-color: black;
   border-style: solid;
   border-width: 2px;
@@ -37,26 +37,26 @@ lib-ngx-minimalist-button div.minimalist-button div.minimalist-button-back {
   z-index: -1;
 }
 
-lib-ngx-minimalist-summary {
+lib-minimalist-summary {
   font-family: "Josefin Sans", sans-serif;
 }
-lib-ngx-minimalist-summary .minimalist-summary {
+lib-minimalist-summary .minimalist-summary {
   border-color: black;
   border-style: solid;
   border-width: 2px;
   border-radius: 9px;
   overflow: hidden;
 }
-lib-ngx-minimalist-summary .minimalist-summary-item {
+lib-minimalist-summary .minimalist-summary-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 15px;
 }
-lib-ngx-minimalist-summary .minimalist-summary-item:not(.minimalist-summary-total):not(:nth-last-child(2)) {
+lib-minimalist-summary .minimalist-summary-item:not(.minimalist-summary-total):not(:nth-last-child(2)) {
   border-bottom: 1px dashed black;
 }
-lib-ngx-minimalist-summary .minimalist-summary-total {
+lib-minimalist-summary .minimalist-summary-total {
   background-color: #def5e5;
   border-top: 2px solid black;
   font-weight: bold;

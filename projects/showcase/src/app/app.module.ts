@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {
-  NgxMinimalistButtonModule,
-  NgxMinimalistSummaryModule,
-} from 'ngx-minimalist-ui';
+import { NgxMinimalistButtonModule } from 'ngx-minimalist-ui/button';
+import { NgxMinimalistSummaryModule } from 'ngx-minimalist-ui/summary';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

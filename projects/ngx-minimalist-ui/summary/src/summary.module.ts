@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxMinimalistSummaryComponent } from './ngx-minimalist-summary.component';
+import { NgxMinimalistSummaryComponent } from './summary.component';
 
 @NgModule({
   declarations: [NgxMinimalistSummaryComponent],
