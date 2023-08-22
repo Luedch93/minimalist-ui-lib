@@ -1,0 +1,58 @@
+@import "../mixins";
+
+lib-date-slider {
+  @include font();
+  color: #2c3333;
+
+  .minimalist-date-slider {
+    position: relative;
+
+    &-front {
+      @include border(2px);
+      @include no-selection();
+      padding: 20px 15px;
+      background-color: white;
+      overflow: hidden;
+      &-slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        // animation-name: move;
+        // animation-duration: 1s;
+        // animation-iteration-count: infinite;
+        &-date {
+          padding: 15px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px;
+          border: 2px solid transparent;
+          &.active {
+            @include border(2px);
+            background-color: #a8df8e;
+            color: black;
+            transition: background-color 0.8s ease, border-color 0.8s ease;
+            flex-direction: column-reverse;
+          }
+
+          &-value {
+            font-size: 1.9rem;
+          }
+        }
+      }
+    }
+
+    &-back {
+      @include back-border();
+      background-color: #ffeebb;
+    }
+  }
+}
+
+@keyframes move {
+  50% {
+    transform: translateX(-50px);
+  }
+}

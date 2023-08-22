@@ -14,3 +14,14 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+@mixin back-border() {
+  @include border(2px);
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 3px;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}

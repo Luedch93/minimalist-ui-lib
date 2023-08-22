@@ -58,7 +58,8 @@
               "projects/showcase/src/assets"
             ],
             "styles": ["projects/showcase/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["moment"]
           },
           "configurations": {
             "production": {

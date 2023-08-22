@@ -1,0 +1,20 @@
+<div class="minimalist-date-slider">
+  <div class="minimalist-date-slider-front">
+    <div class="minimalist-date-slider-front-slider">
+      <div
+        class="minimalist-date-slider-front-slider-date"
+        *ngFor="let date of sliderDates$ | async"
+        [ngClass]="activeDate === date.date ? 'active' : ''"
+        (click)="handleClick(date.date)"
+      >
+        <div class="minimalist-date-slider-front-slider-date-value">
+          {{ date.date }}
+        </div>
+        <div class="minimalist-date-slider-front-slider-date-day">
+          {{ date.day }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="minimalist-date-slider-back"></div>
+</div>

@@ -2,7 +2,7 @@
   <div class="minimalist-summary-item" *ngFor="let item of summaryList">
     <span class="minimalist-summary-item-detail">{{ item.detail }}</span>
     <span class="minimalist-summary-item-amount">{{
-      item.amount | currency : currencyCode : true
+      item.amount | currency : currencyCode : "symbol"
     }}</span>
   </div>
 
@@ -12,7 +12,7 @@
   >
     <span class="minimalist-summary-item-detail">Total</span>
     <span class="minimalist-summary-item-amount">{{
-      total | currency : currencyCode : true
+      total | currency : currencyCode : "symbol"
     }}</span>
   </div>
 </div>
