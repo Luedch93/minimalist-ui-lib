@@ -1,4 +1,5 @@
 export type DateSliderItem = {
-  date: string;
+  monthDate: string;
   day: string;
+  date: Date;
 };

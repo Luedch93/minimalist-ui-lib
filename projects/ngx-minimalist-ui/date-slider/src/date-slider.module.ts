@@ -5,8 +5,8 @@ import { DateSliderComponent } from './date-slider.component';
 import { SliderDirective } from './directives';
 
 @NgModule({
-  declarations: [DateSliderComponent, SliderDirective],
+  declarations: [DateSliderComponent],
   imports: [CommonModule],
-  exports: [DateSliderComponent, SliderDirective],
+  exports: [DateSliderComponent],
 })
 export class DateSliderModule {}

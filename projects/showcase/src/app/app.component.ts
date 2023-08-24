@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { DateSliderItem } from 'ngx-minimalist-ui/date-slider';
 import { SummaryList } from 'ngx-minimalist-ui/summary';
 
 @Component({
@@ -29,5 +31,9 @@ export class AppComponent implements OnInit {
 
   logEvent(event: any) {
     console.log(event);
+  }
+
+  handleDateSelected(date: DateSliderItem) {
+    console.log(date);
   }
 }

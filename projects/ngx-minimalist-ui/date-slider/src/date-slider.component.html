@@ -4,11 +4,11 @@
       <div
         class="minimalist-date-slider-front-slider-date"
         *ngFor="let date of sliderDates$ | async"
-        [ngClass]="activeDate === date.date ? 'active' : ''"
-        (click)="handleClick(date.date)"
+        [ngClass]="activeDate === date.monthDate ? 'active' : ''"
+        (click)="handleClick(date)"
       >
         <div class="minimalist-date-slider-front-slider-date-value">
-          {{ date.date }}
+          {{ date.monthDate }}
         </div>
         <div class="minimalist-date-slider-front-slider-date-day">
           {{ date.day }}

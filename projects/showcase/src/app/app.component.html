@@ -25,7 +25,9 @@
 
   <section id="date-slider">
     <app-container [title]="'Date Slider'">
-      <lib-date-slider></lib-date-slider>
+      <lib-date-slider
+        (dateChange)="handleDateSelected($event)"
+      ></lib-date-slider>
     </app-container>
   </section>
 </main>

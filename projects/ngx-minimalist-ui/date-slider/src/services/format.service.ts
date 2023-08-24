@@ -10,8 +10,9 @@ export class FormatService {
     const dates = this.generateDates(date);
 
     return dates.map((momentDate: moment.Moment) => ({
-      date: momentDate.format('DD'),
+      date: momentDate.toDate(),
       day: momentDate.format('ddd'),
+      monthDate: momentDate.format('DD'),
     }));
   }
 
