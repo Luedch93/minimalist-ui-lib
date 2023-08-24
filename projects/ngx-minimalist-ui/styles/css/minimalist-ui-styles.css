@@ -105,7 +105,14 @@ lib-date-slider .minimalist-date-slider-front-slider-date.active {
   background-color: #a8df8e;
   color: black;
   transition: background-color 0.8s ease, border-color 0.8s ease;
-  flex-direction: column-reverse;
+}
+lib-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-day {
+  transform: translateY(-40px);
+  transition: transform 0.4s ease;
+}
+lib-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-value {
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
 }
 lib-date-slider .minimalist-date-slider-front-slider-date-value {
   font-size: 1.9rem;
@@ -123,12 +130,6 @@ lib-date-slider .minimalist-date-slider-back {
   display: block;
   z-index: -1;
   background-color: #ffeebb;
-}
-
-@keyframes move {
-  50% {
-    transform: translateX(-50px);
-  }
 }
 
 /*# sourceMappingURL=minimalist-ui-styles.css.map */

@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng build --project=ngx-minimalist-ui && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "styles": "sass projects/ngx-minimalist-ui/styles/sass/index.scss projects/ngx-minimalist-ui/styles/css/minimalist-ui-styles.css --watch"
   },
   "private": true,
   "dependencies": {
