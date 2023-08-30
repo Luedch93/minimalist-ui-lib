@@ -1,0 +1,23 @@
+<h1>Date slider</h1>
+
+<h2>Reactive Form with date slider</h2>
+<form [formGroup]="formGroup">
+  <lib-date-slider
+    formControlName="date"
+    (dateChange)="handleDateSelected($event)"
+  ></lib-date-slider>
+  <br />
+  <div>
+    <button type="button" (click)="resetForm()">Clear</button>
+    <button type="button" [disabled]="formGroup.invalid">Submit</button>
+  </div>
+</form>
+
+<p>Form Value</p>
+<pre
+  >{{ formGroup.value | json }}
+</pre>
+<p>Date slider validation errors</p>
+<pre
+  >{{ formGroup.controls.date.errors | json }}
+</pre>

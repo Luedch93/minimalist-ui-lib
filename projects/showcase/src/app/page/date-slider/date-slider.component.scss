@@ -1,0 +1,15 @@
+lib-date-slider {
+  display: block;
+  max-width: 600px;
+}
+
+lib-date-slider.ng-invalid {
+  .minimalist-date-slider-front-slider-date {
+    &:hover {
+      background-color: lighten($color: red, $amount: 40);
+    }
+  }
+  .minimalist-date-slider-back {
+    background-color: red;
+  }
+}

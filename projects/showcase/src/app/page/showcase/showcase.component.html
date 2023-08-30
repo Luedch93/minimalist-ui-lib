@@ -1,0 +1,33 @@
+<section id="showcase">
+  <header>
+    <h1>Minimalist UI showcase</h1>
+  </header>
+
+  <section id="button">
+    <app-container [title]="'Button'">
+      <lib-minimalist-button
+        (click)="logEvent($event)"
+        [backgroundColor]="backgroundColor"
+      >
+        Hello World
+      </lib-minimalist-button>
+    </app-container>
+  </section>
+
+  <section id="summary">
+    <app-container [title]="'Summary'">
+      <lib-minimalist-summary
+        [summaryList]="products"
+        [currencyCode]="currency"
+      ></lib-minimalist-summary>
+    </app-container>
+  </section>
+
+  <section id="date-slider">
+    <app-container [title]="'Date Slider'">
+      <lib-date-slider
+        (dateChange)="handleDateSelected($event)"
+      ></lib-date-slider>
+    </app-container>
+  </section>
+</section>

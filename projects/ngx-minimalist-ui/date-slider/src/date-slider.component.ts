@@ -1,4 +1,12 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import {
+  NG_VALUE_ACCESSOR,
+  ControlValueAccessor,
+  AbstractControl,
+  ValidationErrors,
+  NG_VALIDATORS,
+  Validator,
+} from '@angular/forms';
 
 import { Observable } from 'rxjs';
 
@@ -8,13 +16,25 @@ import { DateSliderItem } from './types';
 @Component({
   selector: 'lib-date-slider',
   templateUrl: './date-slider.component.html',
-  providers: [DateService, FormatService],
+  providers: [
+    DateService,
+    FormatService,
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: DateSliderComponent,
+    },
+  ],
 })
-export class DateSliderComponent implements OnInit {
+export class DateSliderComponent implements OnInit, ControlValueAccessor {
   @Output() dateChange = new EventEmitter<DateSliderItem>();
   @Input() date!: string;
   sliderDates$: Observable<DateSliderItem[]> = this.dateService.sliderDates$;
-  activeDate!: string;
+  activeDate!: string | null;
+  touched = false;
+  disabled = false;
+  onChange = (date: Date) => {};
+  onTouched = () => {};
 
   constructor(private dateService: DateService) {}
 
@@ -22,11 +42,45 @@ export class DateSliderComponent implements OnInit {
     const date = this.date ? new Date(this.date) : new Date();
 
     this.dateService.setDate(date);
-    this.activeDate = `${date.getDate()}`;
   }
 
   handleClick(selectedDate: DateSliderItem): void {
-    this.activeDate = selectedDate.monthDate;
-    this.dateChange.emit(selectedDate);
+    this.markAsTouched();
+    if (!this.disabled) {
+      this.activeDate = selectedDate.monthDate;
+      this.onChange(selectedDate.date);
+      this.dateChange.emit(selectedDate);
+    }
+  }
+
+  writeValue(date: DateSliderItem): void {
+    if (date === null) {
+      this.activeDate = null;
+      return;
+    }
+    if (date instanceof Date) {
+      this.activeDate = String(date.getDate());
+      return;
+    }
+    this.activeDate = date.monthDate;
+  }
+
+  registerOnChange(onChange: any) {
+    this.onChange = onChange;
+  }
+
+  registerOnTouched(onTouched: any) {
+    this.onTouched = onTouched;
+  }
+
+  markAsTouched() {
+    if (!this.touched) {
+      this.onTouched();
+      this.touched = true;
+    }
+  }
+
+  setDisabledState(disabled: boolean) {
+    this.disabled = disabled;
   }
 }

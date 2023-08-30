@@ -96,13 +96,18 @@ lib-date-slider .minimalist-date-slider-front-slider-date {
   flex-direction: column;
   gap: 10px;
   border: 2px solid transparent;
+  cursor: pointer;
+}
+lib-date-slider .minimalist-date-slider-front-slider-date:hover {
+  background-color: #a5f1e9;
+  border-radius: 9px;
 }
 lib-date-slider .minimalist-date-slider-front-slider-date.active {
   border-color: black;
   border-style: solid;
   border-width: 2px;
   border-radius: 9px;
-  background-color: #a8df8e;
+  background-color: #7fe9de;
   color: black;
   transition: background-color 0.8s ease, border-color 0.8s ease;
 }

@@ -26,9 +26,14 @@ lib-date-slider {
           flex-direction: column;
           gap: 10px;
           border: 2px solid transparent;
+          cursor: pointer;
+          &:hover {
+            background-color: #a5f1e9;
+            border-radius: 9px;
+          }
           &.active {
             @include border(2px);
-            background-color: #a8df8e;
+            background-color: #7fe9de;
             color: black;
             transition: background-color 0.8s ease, border-color 0.8s ease;
 
