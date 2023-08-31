@@ -1,0 +1,58 @@
+@import "../mixins";
+
+lib-minimalist-checkbox-amount {
+  @include font();
+
+  div.minimalist-checkbox {
+    position: relative;
+    @include no-selection();
+    &.minimalist-checkbox-active {
+      div.minimalist-checkbox-front {
+        transform: translate(3px, 2px);
+        &:hover {
+          transform: translate(3px, 2px);
+        }
+      }
+    }
+
+    div.minimalist-checkbox-front {
+      @include border(2px);
+      font-size: 17px;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+      &:hover {
+        transform: translate(1px, 1px);
+      }
+      &:active {
+        transform: translate(3px, 2px);
+      }
+      div.minimalist-checkbox-front-left {
+        padding: 15px 10px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        border-right: 1px dashed black;
+        div.minimalist-checkbox-front-left-text {
+          margin-left: 8px;
+        }
+
+        img.minimalist-checkbox-front-left-icon {
+          min-width: 22px;
+          height: 22px;
+        }
+      }
+
+      div.minimalist-checkbox-front-right {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    div.minimalist-checkbox-back {
+      @include back-border();
+    }
+  }
+}

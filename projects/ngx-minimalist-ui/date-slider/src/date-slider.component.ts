@@ -14,7 +14,7 @@ import { DateService, FormatService } from './services';
 import { DateSliderItem } from './types';
 
 @Component({
-  selector: 'lib-date-slider',
+  selector: 'lib-minimalist-date-slider',
   templateUrl: './date-slider.component.html',
   providers: [
     DateService,

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 
 import { DateSliderItem } from 'ngx-minimalist-ui/date-slider';
 import { SummaryList } from 'ngx-minimalist-ui/summary';
+import {
+  CheckboxItem,
+  CheckboxItemEvent,
+} from 'ngx-minimalist-ui/checkbox-amount';
 
 @Component({
   selector: 'app-showcase',
@@ -25,6 +29,10 @@ export class ShowcaseComponent {
     },
   ];
   currency = 'EUR';
+  checkboxItem: CheckboxItem = {
+    text: 'Laser gun',
+    value: 200,
+  };
 
   logEvent(event: any) {
     console.log(event);
@@ -32,5 +40,9 @@ export class ShowcaseComponent {
 
   handleDateSelected(date: DateSliderItem) {
     console.log(date);
+  }
+
+  onCheckBoxChange(checkBoxEvent: CheckboxItemEvent) {
+    console.log(checkBoxEvent);
   }
 }

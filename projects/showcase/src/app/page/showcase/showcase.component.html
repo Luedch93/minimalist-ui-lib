@@ -25,9 +25,19 @@
 
   <section id="date-slider">
     <app-container [title]="'Date Slider'">
-      <lib-date-slider
+      <lib-minimalist-date-slider
         (dateChange)="handleDateSelected($event)"
-      ></lib-date-slider>
+      ></lib-minimalist-date-slider>
+    </app-container>
+  </section>
+
+  <section id="checkbox-amount">
+    <app-container [title]="'Checkbox Amount'">
+      <lib-minimalist-checkbox-amount
+        [checkboxItem]="checkboxItem"
+        (checked)="onCheckBoxChange($event)"
+      >
+      </lib-minimalist-checkbox-amount>
     </app-container>
   </section>
 </section>

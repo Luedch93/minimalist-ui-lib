@@ -63,14 +63,14 @@ lib-minimalist-summary .minimalist-summary-total {
   font-weight: bold;
 }
 
-lib-date-slider {
+lib-minimalist-date-slider {
   font-family: "Josefin Sans", sans-serif;
   color: #2c3333;
 }
-lib-date-slider .minimalist-date-slider {
+lib-minimalist-date-slider .minimalist-date-slider {
   position: relative;
 }
-lib-date-slider .minimalist-date-slider-front {
+lib-minimalist-date-slider .minimalist-date-slider-front {
   border-color: black;
   border-style: solid;
   border-width: 2px;
@@ -82,13 +82,13 @@ lib-date-slider .minimalist-date-slider-front {
   background-color: white;
   overflow: hidden;
 }
-lib-date-slider .minimalist-date-slider-front-slider {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date {
   padding: 15px 10px;
   display: flex;
   align-items: center;
@@ -98,11 +98,11 @@ lib-date-slider .minimalist-date-slider-front-slider-date {
   border: 2px solid transparent;
   cursor: pointer;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date:hover {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date:hover {
   background-color: #a5f1e9;
   border-radius: 9px;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date.active {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date.active {
   border-color: black;
   border-style: solid;
   border-width: 2px;
@@ -111,18 +111,18 @@ lib-date-slider .minimalist-date-slider-front-slider-date.active {
   color: black;
   transition: background-color 0.8s ease, border-color 0.8s ease;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-day {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-day {
   transform: translateY(-40px);
   transition: transform 0.4s ease;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-value {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date.active .minimalist-date-slider-front-slider-date-value {
   transform: translateY(30px);
   transition: transform 0.4s ease;
 }
-lib-date-slider .minimalist-date-slider-front-slider-date-value {
+lib-minimalist-date-slider .minimalist-date-slider-front-slider-date-value {
   font-size: 1.9rem;
 }
-lib-date-slider .minimalist-date-slider-back {
+lib-minimalist-date-slider .minimalist-date-slider-back {
   border-color: black;
   border-style: solid;
   border-width: 2px;
@@ -135,6 +135,71 @@ lib-date-slider .minimalist-date-slider-back {
   display: block;
   z-index: -1;
   background-color: #ffeebb;
+}
+
+lib-minimalist-checkbox-amount {
+  font-family: "Josefin Sans", sans-serif;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox {
+  position: relative;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox.minimalist-checkbox-active div.minimalist-checkbox-front {
+  transform: translate(3px, 2px);
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox.minimalist-checkbox-active div.minimalist-checkbox-front:hover {
+  transform: translate(3px, 2px);
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  font-size: 17px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front:hover {
+  transform: translate(1px, 1px);
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front:active {
+  transform: translate(3px, 2px);
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front div.minimalist-checkbox-front-left {
+  padding: 15px 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  border-right: 1px dashed black;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front div.minimalist-checkbox-front-left div.minimalist-checkbox-front-left-text {
+  margin-left: 8px;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front div.minimalist-checkbox-front-left img.minimalist-checkbox-front-left-icon {
+  min-width: 22px;
+  height: 22px;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-front div.minimalist-checkbox-front-right {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-back {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 3px;
+  height: 100%;
+  display: block;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=minimalist-ui-styles.css.map */

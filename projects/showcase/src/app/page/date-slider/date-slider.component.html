@@ -2,10 +2,10 @@
 
 <h2>Reactive Form with date slider</h2>
 <form [formGroup]="formGroup">
-  <lib-date-slider
+  <lib-minimalist-date-slider
     formControlName="date"
     (dateChange)="handleDateSelected($event)"
-  ></lib-date-slider>
+  ></lib-minimalist-date-slider>
   <br />
   <div>
     <button type="button" (click)="resetForm()">Clear</button>
