@@ -12,6 +12,12 @@ const routes: Routes = [
     loadChildren: async () =>
       (await import('./page/date-slider/date-slider.module')).DateSliderModule,
   },
+  {
+    path: 'checkbox-amount',
+    loadChildren: async () =>
+      (await import('./page/checkbox-amount/checkbox-amount.module'))
+        .CheckboxAmountShowCaseModule,
+  },
 ];
 
 @NgModule({

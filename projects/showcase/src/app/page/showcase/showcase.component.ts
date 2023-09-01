@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import { DateSliderItem } from 'ngx-minimalist-ui/date-slider';
 import { SummaryList } from 'ngx-minimalist-ui/summary';
@@ -11,9 +11,9 @@ import {
   selector: 'app-showcase',
   templateUrl: './showcase.component.html',
   styleUrls: ['./showcase.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ShowcaseComponent {
-  backgroundColor = '#daf5ff';
   products: SummaryList[] = [
     {
       detail: 'Cosmic Unity 2',

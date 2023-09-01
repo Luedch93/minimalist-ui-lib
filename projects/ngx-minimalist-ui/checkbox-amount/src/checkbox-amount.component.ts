@@ -37,12 +37,13 @@ export class NgxMinimalistCheckboxAmountComponent
   checkboxClicked() {
     this.markAsTouched();
     if (!this._disabled) {
-      this._checked = !this._checked;
-      this.onChange({
+      const checkboxItemEvent: CheckboxItemEvent = {
         ...this.checkboxItem,
         checked: this._checked,
-      });
-      this.checked.emit(this._checkboxItemEvent);
+      };
+      this._checked = !this._checked;
+      this.onChange(checkboxItemEvent);
+      this.checked.emit(checkboxItemEvent);
     }
   }
 
@@ -51,7 +52,17 @@ export class NgxMinimalistCheckboxAmountComponent
   }
 
   writeValue(checkboxItemEvent: CheckboxItemEvent) {
+    if (!checkboxItemEvent) {
+      this._checked = false;
+      this._checkboxItemEvent = {
+        ...this._checkboxItemEvent,
+        checked: false,
+      };
+
+      return;
+    }
     this._checkboxItemEvent = checkboxItemEvent;
+    this._checked = checkboxItemEvent.checked;
   }
 
   registerOnChange(onChange: any) {

@@ -1,5 +1,8 @@
-<div class="minimalist-button">
-  <div class="minimalist-button-front" [ngStyle]="currentStyles">
+<div
+  class="minimalist-button"
+  [ngClass]="{ 'minimalist-button-disabled': disabled }"
+>
+  <div class="minimalist-button-front">
     <ng-content></ng-content>
   </div>
   <div class="minimalist-button-back"></div>

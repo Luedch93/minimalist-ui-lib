@@ -59,7 +59,7 @@ export class DateSliderComponent implements OnInit, ControlValueAccessor {
       return;
     }
     if (date instanceof Date) {
-      this.activeDate = String(date.getDate());
+      this.activeDate = this.formatDate(date);
       return;
     }
     this.activeDate = date.monthDate;
@@ -82,5 +82,13 @@ export class DateSliderComponent implements OnInit, ControlValueAccessor {
 
   setDisabledState(disabled: boolean) {
     this.disabled = disabled;
+  }
+
+  private formatDate(date: Date) {
+    const monthDate = date.getDate();
+    if (monthDate < 10) {
+      return `0${monthDate}`;
+    }
+    return String(monthDate);
   }
 }

@@ -6,6 +6,7 @@ import { NgxMinimalistDateSliderModule } from 'ngx-minimalist-ui/date-slider';
 
 import { DateSliderComponent } from './date-slider.component';
 import { DateSliderRoutingModule } from './date-slider-routing.module';
+import { NgxMinimalistButtonModule } from 'ngx-minimalist-ui/button';
 
 @NgModule({
   declarations: [DateSliderComponent],
@@ -14,6 +15,7 @@ import { DateSliderRoutingModule } from './date-slider-routing.module';
     ReactiveFormsModule,
     DateSliderRoutingModule,
     NgxMinimalistDateSliderModule,
+    NgxMinimalistButtonModule,
   ],
 })
 export class DateSliderModule {}

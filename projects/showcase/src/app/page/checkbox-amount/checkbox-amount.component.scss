@@ -1,20 +1,6 @@
-lib-minimalist-date-slider {
+lib-minimalist-checkbox-amount {
   display: block;
-}
-
-form {
-  max-width: 600px;
-}
-
-lib-minimalist-date-slider.ng-invalid {
-  .minimalist-date-slider-front-slider-date {
-    &:hover {
-      background-color: lighten($color: red, $amount: 40);
-    }
-  }
-  .minimalist-date-slider-back {
-    background-color: red;
-  }
+  margin-bottom: 20px;
 }
 
 #form-actions {

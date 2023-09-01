@@ -1,0 +1,26 @@
+<form [formGroup]="fg">
+  <ng-container *ngFor="let checkboxItem of checkboxItems; let i = index">
+    <lib-minimalist-checkbox-amount
+      [checkboxItem]="checkboxItem"
+      (checked)="onCheckBoxChange($event)"
+      [formControlName]="'item-' + (i + 1)"
+    >
+    </lib-minimalist-checkbox-amount>
+  </ng-container>
+
+  <section id="form-actions">
+    <lib-minimalist-button class="form-reset-btn" (click)="resetForm()"
+      >Reset</lib-minimalist-button
+    >
+    <lib-minimalist-button
+      class="form-submit-btn"
+      [disabled]="fg.invalid"
+      (click)="handleSubmit()"
+      >Submit</lib-minimalist-button
+    >
+  </section>
+</form>
+
+<pre
+  >{{ fg.value | json }}
+</pre>

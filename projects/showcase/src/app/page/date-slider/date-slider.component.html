@@ -7,15 +7,22 @@
     (dateChange)="handleDateSelected($event)"
   ></lib-minimalist-date-slider>
   <br />
-  <div>
-    <button type="button" (click)="resetForm()">Clear</button>
-    <button type="button" [disabled]="formGroup.invalid">Submit</button>
-  </div>
+  <section id="form-actions">
+    <lib-minimalist-button class="form-reset-btn" (click)="resetForm()"
+      >Clear</lib-minimalist-button
+    >
+    <lib-minimalist-button
+      class="form-submit-btn"
+      [disabled]="formGroup.invalid"
+      (click)="handleSubmit()"
+      >Submit</lib-minimalist-button
+    >
+  </section>
 </form>
 
 <p>Form Value</p>
 <pre
-  >{{ formGroup.value | json }}
+  >{{ dateSliderStatus | json }}
 </pre>
 <p>Date slider validation errors</p>
 <pre

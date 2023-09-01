@@ -8,6 +8,12 @@ lib-minimalist-button div.minimalist-button {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+lib-minimalist-button div.minimalist-button-disabled {
+  pointer-events: none;
+}
+lib-minimalist-button div.minimalist-button-disabled div.minimalist-button-front {
+  background-color: #daeaf1;
+}
 lib-minimalist-button div.minimalist-button div.minimalist-button-front {
   border-color: black;
   border-style: solid;
@@ -16,6 +22,8 @@ lib-minimalist-button div.minimalist-button div.minimalist-button-front {
   padding: 15px 0;
   text-align: center;
   font-size: 17px;
+  background-color: white;
+  color: black;
 }
 lib-minimalist-button div.minimalist-button div.minimalist-button-front:hover {
   transform: translate(1px, 1px);

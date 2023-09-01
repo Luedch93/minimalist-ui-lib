@@ -5,10 +5,7 @@
 
   <section id="button">
     <app-container [title]="'Button'">
-      <lib-minimalist-button
-        (click)="logEvent($event)"
-        [backgroundColor]="backgroundColor"
-      >
+      <lib-minimalist-button class="showcase-btn" (click)="logEvent($event)">
         Hello World
       </lib-minimalist-button>
     </app-container>

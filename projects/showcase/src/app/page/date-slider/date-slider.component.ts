@@ -11,12 +11,6 @@ export class DateSliderComponent {
   formGroup = this.fb.group({
     date: [new Date(), Validators.required],
   });
-  dateSliderStatus: any = {
-    touched: this.slider.touched,
-    valid: this.slider.valid,
-    dirty: this.slider.dirty,
-    value: this.slider.value,
-  };
 
   constructor(private fb: FormBuilder) {}
 
@@ -28,7 +22,22 @@ export class DateSliderComponent {
     return this.formGroup.controls.date;
   }
 
+  get dateSliderStatus(): any {
+    return {
+      touched: this.slider.touched,
+      valid: this.slider.valid,
+      dirty: this.slider.dirty,
+      value: this.slider.value,
+    };
+  }
+
   resetForm() {
     this.formGroup.reset();
+  }
+
+  handleSubmit() {
+    if (this.formGroup.valid) {
+      console.log(this.formGroup.value);
+    }
   }
 }

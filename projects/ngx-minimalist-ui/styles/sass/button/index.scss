@@ -7,11 +7,21 @@ lib-minimalist-button {
     position: relative;
     @include no-selection();
 
+    &-disabled {
+      pointer-events: none;
+
+      div.minimalist-button-front {
+        background-color: #daeaf1;
+      }
+    }
+
     div.minimalist-button-front {
       @include border(2px);
       padding: 15px 0;
       text-align: center;
       font-size: 17px;
+      background-color: white;
+      color: black;
       &:hover {
         transform: translate(1px, 1px);
       }
