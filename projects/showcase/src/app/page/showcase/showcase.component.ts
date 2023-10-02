@@ -45,4 +45,8 @@ export class ShowcaseComponent {
   onCheckBoxChange(checkBoxEvent: CheckboxItemEvent) {
     console.log(checkBoxEvent);
   }
+
+  handleHeaderClick(event: Event) {
+    console.log(event);
+  }
 }

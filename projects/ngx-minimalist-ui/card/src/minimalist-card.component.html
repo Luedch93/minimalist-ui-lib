@@ -1,0 +1,14 @@
+<div class="minimalist-card">
+  <div class="minimalist-card-front">
+    <div class="minimalist-card-header" (click)="headerClicked($event)">
+      <ng-content select=".minimalist-card-header-content"></ng-content>
+      <ng-container *ngIf="showHeaderIcon">
+        <i class="gg-chevron-right minimalist-card-header-logo"></i>
+      </ng-container>
+    </div>
+    <div class="minimalist-card-body">
+      <ng-content select=".minimalist-card-body-content"></ng-content>
+    </div>
+  </div>
+  <div class="minimalist-card-back"></div>
+</div>

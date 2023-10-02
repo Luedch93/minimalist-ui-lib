@@ -1,0 +1,31 @@
+@import "../mixins";
+
+lib-minimalist-card {
+  @include font();
+  .minimalist-card {
+    position: relative;
+    .minimalist-card-front {
+      @include border(2px);
+      background-color: white;
+      color: black;
+      overflow: hidden;
+      .minimalist-card-header {
+        padding: 15px;
+        background-color: #e0f5f5;
+        cursor: pointer;
+        border-bottom: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .minimalist-card-body {
+        padding: 15px;
+      }
+    }
+
+    .minimalist-card-back {
+      @include back-border();
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NgxMinimalistButtonModule } from 'ngx-minimalist-ui/button';
 import { NgxMinimalistSummaryModule } from 'ngx-minimalist-ui/summary';
 import { NgxMinimalistDateSliderModule } from 'ngx-minimalist-ui/date-slider';
+import { NgxMinimalistCardModule } from 'ngx-minimalist-ui/card';
 import { NgxMinimalistCheckboxAmountModule } from 'ngx-minimalist-ui/checkbox-amount';
 
 import { ShowcaseComponent } from './showcase.component';
@@ -17,6 +18,7 @@ import { ShowcaseRoutingModule } from './showcase-routing.module';
     NgxMinimalistButtonModule,
     NgxMinimalistSummaryModule,
     NgxMinimalistDateSliderModule,
+    NgxMinimalistCardModule,
     NgxMinimalistCheckboxAmountModule,
     ShowcaseRoutingModule,
   ],

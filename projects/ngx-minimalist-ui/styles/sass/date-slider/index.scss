@@ -28,12 +28,12 @@ lib-minimalist-date-slider {
           border: 2px solid transparent;
           cursor: pointer;
           &:hover {
-            background-color: #a5f1e9;
+            background-color: #eef8f1;
             border-radius: 9px;
           }
           &.active {
             @include border(2px);
-            background-color: #7fe9de;
+            background-color: #def5e5;
             color: black;
             transition: background-color 0.8s ease, border-color 0.8s ease;
 

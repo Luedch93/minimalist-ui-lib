@@ -37,4 +37,20 @@
       </lib-minimalist-checkbox-amount>
     </app-container>
   </section>
+
+  <section id="card">
+    <app-container [title]="'Card'">
+      <lib-minimalist-card
+        (headerClick)="handleHeaderClick($event)"
+        [showHeaderIcon]="true"
+      >
+        <div class="minimalist-card-header-content">Inventory</div>
+        <div class="minimalist-card-body-content">
+          <div>2 - clips</div>
+          <div>4 - rules</div>
+          <div>10 - pencils</div>
+        </div>
+      </lib-minimalist-card>
+    </app-container>
+  </section>
 </section>

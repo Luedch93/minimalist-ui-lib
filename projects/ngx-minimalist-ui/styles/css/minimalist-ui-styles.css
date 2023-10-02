@@ -107,7 +107,7 @@ lib-minimalist-date-slider .minimalist-date-slider-front-slider-date {
   cursor: pointer;
 }
 lib-minimalist-date-slider .minimalist-date-slider-front-slider-date:hover {
-  background-color: #a5f1e9;
+  background-color: #eef8f1;
   border-radius: 9px;
 }
 lib-minimalist-date-slider .minimalist-date-slider-front-slider-date.active {
@@ -115,7 +115,7 @@ lib-minimalist-date-slider .minimalist-date-slider-front-slider-date.active {
   border-style: solid;
   border-width: 2px;
   border-radius: 9px;
-  background-color: #7fe9de;
+  background-color: #def5e5;
   color: black;
   transition: background-color 0.8s ease, border-color 0.8s ease;
 }
@@ -197,6 +197,47 @@ lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-f
   align-items: center;
 }
 lib-minimalist-checkbox-amount div.minimalist-checkbox div.minimalist-checkbox-back {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 3px;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+lib-minimalist-card {
+  font-family: "Josefin Sans", sans-serif;
+}
+lib-minimalist-card .minimalist-card {
+  position: relative;
+}
+lib-minimalist-card .minimalist-card .minimalist-card-front {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  background-color: white;
+  color: black;
+  overflow: hidden;
+}
+lib-minimalist-card .minimalist-card .minimalist-card-front .minimalist-card-header {
+  padding: 15px;
+  background-color: #e0f5f5;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+lib-minimalist-card .minimalist-card .minimalist-card-front .minimalist-card-body {
+  padding: 15px;
+}
+lib-minimalist-card .minimalist-card .minimalist-card-back {
   border-color: black;
   border-style: solid;
   border-width: 2px;
