@@ -8,6 +8,7 @@ import { NgxMinimalistCardModule } from 'ngx-minimalist-ui/card';
 import { NgxMinimalistCheckboxAmountModule } from 'ngx-minimalist-ui/checkbox-amount';
 import { NgxProgressBarModule } from 'ngx-minimalist-ui/progress-bar';
 import { NgxMinimalistAlertModule } from 'ngx-minimalist-ui/alert';
+import { NgxMinimalistNavButtonModule } from 'ngx-minimalist-ui/nav-button';
 
 import { ShowcaseComponent } from './showcase.component';
 import { ContainerComponent } from '../../components/container/container.component';
@@ -24,6 +25,7 @@ import { ShowcaseRoutingModule } from './showcase-routing.module';
     NgxMinimalistCheckboxAmountModule,
     NgxProgressBarModule,
     NgxMinimalistAlertModule,
+    NgxMinimalistNavButtonModule,
     ShowcaseRoutingModule,
   ],
 })

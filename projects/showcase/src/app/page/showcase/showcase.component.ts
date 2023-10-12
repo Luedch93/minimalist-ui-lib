@@ -60,4 +60,8 @@ export class ShowcaseComponent implements OnInit {
   handleHeaderClick(event: Event) {
     console.log(event);
   }
+
+  onNavButtonClick(event: Event) {
+    console.log(event);
+  }
 }

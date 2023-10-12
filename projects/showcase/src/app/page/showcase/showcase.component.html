@@ -72,4 +72,12 @@
       </lib-minimalist-alert>
     </app-container>
   </section>
+
+  <section id="navbutton">
+    <app-container [title]="'Nav Button'">
+      <lib-minimalist-nav-button (clicked)="onNavButtonClick($event)">
+        <p><b>Go to discounts</b></p>
+      </lib-minimalist-nav-button>
+    </app-container>
+  </section>
 </section>

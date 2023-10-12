@@ -1,0 +1,31 @@
+@import "../mixins";
+
+lib-minimalist-nav-button {
+  @include font();
+  div.minimalist-nav-button {
+    cursor: pointer;
+    position: relative;
+    @include no-selection();
+
+    div.minimalist-nav-button-front {
+      @include border(2px);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 17px;
+      background-color: white;
+      color: black;
+      position: relative;
+
+      i.minimalist-nav-button-front-icon {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translateY(-50%);
+      }
+    }
+
+    div.minimalist-nav-button-back {
+      @include back-border();
+    }
+  }
+}
