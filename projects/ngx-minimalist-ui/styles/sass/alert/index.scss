@@ -1,0 +1,24 @@
+@import "../mixins";
+
+lib-minimalist-alert {
+  @include font();
+  div.minimalist-alert {
+    position: relative;
+    @include no-selection();
+    pointer-events: none;
+
+    div.minimalist-alert-front {
+      @include border(2px);
+      border-style: dashed;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 17px;
+      background-color: #fff3cc;
+      color: black;
+    }
+
+    div.minimalist-alert-back {
+      @include back-border();
+    }
+  }
+}
