@@ -49,3 +49,16 @@ section#showcase {
     }
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-sm {
+  gap: 10px;
+}
