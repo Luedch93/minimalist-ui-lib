@@ -28,7 +28,7 @@
     </app-container>
   </section>
 
-  <section id="checkbox-amount">
+  <section id="checkbox">
     <app-container [title]="'Checkbox Amount'">
       <lib-minimalist-checkbox-amount
         [checkboxItem]="checkboxItem"
@@ -51,6 +51,16 @@
           <div>10 - pencils</div>
         </div>
       </lib-minimalist-card>
+    </app-container>
+  </section>
+
+  <section id="progressbar">
+    <app-container [title]="'Progress bar'">
+      <lib-progress-bar
+        [currentProgress]="currentStep"
+        [numberSteps]="5"
+        (progressChange)="logProgressChange($event)"
+      ></lib-progress-bar>
     </app-container>
   </section>
 </section>

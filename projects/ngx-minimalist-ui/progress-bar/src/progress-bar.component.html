@@ -1,0 +1,16 @@
+<div class="minimalist-progressbar">
+  <div class="minimalist-progressbar-item" *ngFor="let step of steps">
+    <i
+      class="minimalist-progressbar-icon gg-check-o"
+      [class.minimalist-progressbar-icon-complete]="isStepComplete(step)"
+      (click)="onIconClick(step)"
+    ></i>
+    <div
+      class="minimalist-progressbar-icon-line"
+      [class.minimalist-progressbar-icon-line-active]="isStepComplete(step + 1)"
+      *ngIf="step < steps.length"
+    >
+      <div class="minimalist-progressbar-icon-line-x"></div>
+    </div>
+  </div>
+</div>

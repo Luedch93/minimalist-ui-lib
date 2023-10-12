@@ -1,0 +1,61 @@
+$gap: 40px;
+.minimalist-progressbar {
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+  align-items: start;
+  .minimalist-progressbar-item {
+    position: relative;
+  }
+  .minimalist-progressbar-icon {
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    &-complete {
+      animation: paint 1s linear both;
+    }
+  }
+  .minimalist-progressbar-icon-line {
+    z-index: 0;
+    height: 6px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: calc($gap + 20px);
+    transform: translateY(-50%);
+    transition: opacity 0.8s;
+    opacity: 0.8;
+
+    &-active {
+      opacity: 1;
+
+      .minimalist-progressbar-icon-line-x {
+        background: linear-gradient(#9cff2e, #aaff48);
+        height: 6px;
+        animation: fill 0.8s ease-out both;
+      }
+    }
+  }
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes paint {
+  0%,
+  50% {
+    background-color: white;
+  }
+
+  100% {
+    background-color: #9cff2e;
+  }
+}

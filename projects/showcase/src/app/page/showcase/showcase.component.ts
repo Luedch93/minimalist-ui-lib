@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { DateSliderItem } from 'ngx-minimalist-ui/date-slider';
 import { SummaryList } from 'ngx-minimalist-ui/summary';
@@ -13,7 +13,7 @@ import {
   styleUrls: ['./showcase.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ShowcaseComponent {
+export class ShowcaseComponent implements OnInit {
   products: SummaryList[] = [
     {
       detail: 'Cosmic Unity 2',
@@ -33,6 +33,13 @@ export class ShowcaseComponent {
     text: 'Laser gun',
     value: 200,
   };
+  currentStep = 1;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.currentStep = 3;
+    }, 1500);
+  }
 
   logEvent(event: any) {
     console.log(event);
@@ -44,6 +51,10 @@ export class ShowcaseComponent {
 
   onCheckBoxChange(checkBoxEvent: CheckboxItemEvent) {
     console.log(checkBoxEvent);
+  }
+
+  logProgressChange(step: number) {
+    console.log('Step change:', step);
   }
 
   handleHeaderClick(event: Event) {

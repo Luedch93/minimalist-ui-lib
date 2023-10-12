@@ -2,7 +2,8 @@ section#showcase {
   display: grid;
   grid-template-areas:
     "header header header"
-    "button summary slider";
+    "button summary slider"
+    "checkbox card progressbar";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 10px;
@@ -24,6 +25,20 @@ section#showcase {
 
   section#summary {
     grid-area: summary;
+  }
+
+  section#checkbox {
+    grid-area: checkbox;
+  }
+  section#card {
+    grid-area: card;
+  }
+  section#progressbar {
+    grid-area: progressbar;
+    lib-progress-bar {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
