@@ -4,18 +4,18 @@
 >
   <div class="minimalist-checkbox-front" (click)="checkboxClicked()">
     <div class="minimalist-checkbox-front-left">
+      @if (checkboxItem.icon) {
       <img
         alt="minimalist-checkbox-icon"
         class="minimalist-checkbox-front-left-icon"
         [src]="checkboxItem.icon"
-        *ngIf="checkboxItem.icon; else defaultIcon"
       />
-      <ng-template #defaultIcon>
-        <i
-          class="minimalist-checkbox-front-left-icon gg-check-o"
-          [style.background-color]="value ? '#9CFF2E' : ''"
-        ></i>
-      </ng-template>
+      } @else {
+      <i
+        class="minimalist-checkbox-front-left-icon gg-check-o"
+        [style.background-color]="value ? '#9CFF2E' : ''"
+      ></i>
+      }
       <div class="minimalist-checkbox-front-left-text">
         {{ checkboxItem.text }}
       </div>

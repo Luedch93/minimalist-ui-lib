@@ -1,11 +1,9 @@
 <div class="minimalist-process-list">
-  <ng-container
-    *ngFor="let info of infoList; let i = index; trackBy: trackByIndex"
-  >
-    <ngx-list-item-component
-      [info]="info"
-      [active]="i === idxSelected"
-      (click)="onItemClick(i)"
-    ></ngx-list-item-component>
-  </ng-container>
+  @for (info of infoList; let i = $index; track i) {
+  <ngx-list-item-component
+    [info]="info"
+    [active]="i === idxSelected"
+    (click)="onItemClick(i)"
+  ></ngx-list-item-component>
+  }
 </div>

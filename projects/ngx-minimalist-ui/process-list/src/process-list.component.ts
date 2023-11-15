@@ -22,8 +22,4 @@ export class ProcessListComponent implements OnInit {
     this.idxSelected = idx;
     this.itemSelected.emit(this.infoList[idx]);
   }
-
-  trackByIndex(idx: number) {
-    return idx;
-  }
 }

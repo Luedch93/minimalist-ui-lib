@@ -1,18 +1,17 @@
 <div class="minimalist-summary">
-  <div class="minimalist-summary-item" *ngFor="let item of summaryList">
+  @for(item of summaryList;track $index) {
+  <div class="minimalist-summary-item">
     <span class="minimalist-summary-item-detail">{{ item.detail }}</span>
     <span class="minimalist-summary-item-amount">{{
       item.amount | currency : currencyCode : "symbol"
     }}</span>
   </div>
-
-  <div
-    class="minimalist-summary-item minimalist-summary-total"
-    *ngIf="summaryList.length > 0"
-  >
+  } @if (summaryList.length > 0) {
+  <div class="minimalist-summary-item minimalist-summary-total">
     <span class="minimalist-summary-item-detail">Total</span>
     <span class="minimalist-summary-item-amount">{{
       total | currency : currencyCode : "symbol"
     }}</span>
   </div>
+  }
 </div>
