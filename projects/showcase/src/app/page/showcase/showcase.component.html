@@ -68,7 +68,7 @@
     <app-container [title]="'Alert'">
       <lib-minimalist-alert>
         <div class="flex center gap-sm">
-          <figure smallFigure>
+          <figure smallFigure [borderStyle]="'dashed'">
             <img
               src="https://s3-ap-southeast-2.amazonaws.com/transforms.imagescience.com.au/_202306_imager-transforms/s3images/Products/Clearance-Products/39878/SALE_8a39ff8a6b9c4355b296f93fc26068cc.jpg"
               alt="on sale"
@@ -86,6 +86,16 @@
       <lib-minimalist-nav-button (clicked)="onNavButtonClick($event)">
         <p><b>Go to discounts</b></p>
       </lib-minimalist-nav-button>
+    </app-container>
+  </section>
+
+  <section id="processList">
+    <app-container [title]="'Process List'">
+      <lib-minimalist-process-list
+        [infoList]="infos"
+        [initialSelectedIndex]="1"
+        (itemSelected)="handleItemSelected($event)"
+      ></lib-minimalist-process-list>
     </app-container>
   </section>
 </section>

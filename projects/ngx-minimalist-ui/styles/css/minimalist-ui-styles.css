@@ -255,7 +255,7 @@ lib-minimalist-card .minimalist-card .minimalist-card-back {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  align-items: start;
+  align-items: flex-start;
 }
 .minimalist-progressbar .minimalist-progressbar-item {
   position: relative;
@@ -370,6 +370,113 @@ lib-minimalist-nav-button div.minimalist-nav-button div.minimalist-nav-button-fr
   transform: translateY(-50%);
 }
 lib-minimalist-nav-button div.minimalist-nav-button div.minimalist-nav-button-back {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 3px;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+lib-minimalist-process-list .minimalist-process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+lib-minimalist-process-list .minimalist-process-list-item {
+  position: relative;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  transition: left 0.2s, top 0.2s;
+  border-color: transparent;
+  color: black;
+  padding: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  background-color: white;
+  position: relative;
+  left: 2px;
+  top: 5px;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front .minimalist-process-list-item-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front .minimalist-process-list-item-icon svg.icon {
+  transition: background-color 0.2s;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front .minimalist-process-list-item-icon svg.icon .background {
+  fill: white;
+  transition: fill 0.2s;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front .minimalist-process-list-item-icon svg.icon .border {
+  fill: #1e1e1e;
+  transition: fill 0.2s;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front lib-minimalist-info-section section.minimalist-info-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  row-gap: 10px;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front lib-minimalist-info-section section.minimalist-info-section .minimalist-info-section-title {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: bold;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front lib-minimalist-info-section section.minimalist-info-section .minimalist-info-section-date {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 0.8rem;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-front lib-minimalist-info-section section.minimalist-info-section .minimalist-info-section-description {
+  grid-row: 2;
+  grid-column: 1/span 2;
+}
+lib-minimalist-process-list .minimalist-process-list-item .minimalist-process-list-item-back {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 3px;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  border-color: transparent;
+}
+lib-minimalist-process-list .minimalist-process-list-item.active .minimalist-process-list-item-front {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  left: 0;
+  top: 0;
+}
+lib-minimalist-process-list .minimalist-process-list-item.active .minimalist-process-list-item-front .minimalist-process-list-item-icon svg.icon.active {
+  background-color: #76ffa0;
+}
+lib-minimalist-process-list .minimalist-process-list-item.active .minimalist-process-list-item-front .minimalist-process-list-item-icon svg.icon.active .background {
+  fill: #76ffa0;
+}
+lib-minimalist-process-list .minimalist-process-list-item.active .minimalist-process-list-item-back {
   border-color: black;
   border-style: solid;
   border-width: 2px;

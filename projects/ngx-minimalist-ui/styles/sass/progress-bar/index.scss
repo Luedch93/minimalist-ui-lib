@@ -3,7 +3,7 @@ $gap: 40px;
   display: flex;
   flex-direction: row;
   gap: $gap;
-  align-items: start;
+  align-items: flex-start;
   .minimalist-progressbar-item {
     position: relative;
   }

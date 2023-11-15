@@ -1,0 +1,12 @@
+<section class="minimalist-process-list-item" [class.active]="active">
+  <div class="minimalist-process-list-item-front">
+    <picture class="minimalist-process-list-item-icon">
+      <ngx-minimalist-icon-selector
+        [icon]="info.icon"
+        [active]="active"
+      ></ngx-minimalist-icon-selector>
+    </picture>
+    <lib-minimalist-info-section [info]="info"></lib-minimalist-info-section>
+  </div>
+  <div class="minimalist-process-list-item-back"></div>
+</section>

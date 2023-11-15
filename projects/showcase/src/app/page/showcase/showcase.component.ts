@@ -6,6 +6,7 @@ import {
   CheckboxItem,
   CheckboxItemEvent,
 } from 'ngx-minimalist-ui/checkbox-amount';
+import { Info } from 'ngx-minimalist-ui/process-list';
 
 @Component({
   selector: 'app-showcase',
@@ -34,6 +35,32 @@ export class ShowcaseComponent implements OnInit {
     value: 200,
   };
   currentStep = 1;
+  infos: Info[] = [
+    {
+      title: 'Gathering your products',
+      description: 'This can take around 15 minutes...',
+      date: new Date(),
+      icon: 'shopping-cart',
+    },
+    {
+      title: 'Calculating the location',
+      description: 'Activate your GPS...',
+      date: new Date(),
+      icon: 'location',
+    },
+    {
+      title: 'Sending package',
+      description: 'Wait until the driver arrives...',
+      date: new Date(),
+      icon: 'transportation',
+    },
+    {
+      title: 'Delivered',
+      description: 'Thanks for using our service...',
+      date: new Date(),
+      icon: 'gift',
+    },
+  ];
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -63,5 +90,9 @@ export class ShowcaseComponent implements OnInit {
 
   onNavButtonClick(event: Event) {
     console.log(event);
+  }
+
+  handleItemSelected(info: Info) {
+    console.log(info);
   }
 }

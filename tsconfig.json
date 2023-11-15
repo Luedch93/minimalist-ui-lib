@@ -12,8 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-minimalist-ui/*": ["dist/ngx-minimalist-ui/*"],
-      "ngx-minimalist-ui": ["dist/ngx-minimalist-ui"]
+      "ngx-minimalist-ui/*": ["projects/ngx-minimalist-ui/*"],
+      "ngx-minimalist-ui": ["projects/ngx-minimalist-ui"]
     },
     "declaration": false,
     "downlevelIteration": true,
