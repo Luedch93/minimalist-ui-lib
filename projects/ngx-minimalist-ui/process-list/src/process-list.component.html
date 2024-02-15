@@ -1,9 +1,14 @@
 <div class="minimalist-process-list">
   @for (info of infoList; let i = $index; track i) {
   <ngx-list-item-component
+    [id]="'minimalist-item-' + i"
+    tabindex="0"
+    #item
+    (keydown.Space)="$event.preventDefault(); onItemClick(i)"
     [info]="info"
     [active]="i === idxSelected"
     (click)="onItemClick(i)"
+    (keydown)="handleNavigation($event, i)"
   ></ngx-list-item-component>
   }
 </div>

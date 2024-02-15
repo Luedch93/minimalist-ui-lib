@@ -11,10 +11,12 @@ import { NgxMinimalistAlertModule } from 'ngx-minimalist-ui/alert';
 import { NgxMinimalistNavButtonModule } from 'ngx-minimalist-ui/nav-button';
 import { NgxMinimalistSmallFigureModule } from 'ngx-minimalist-ui/small-figure';
 import { ProcessListModule } from 'ngx-minimalist-ui/process-list';
+import { SearchBarModule } from 'ngx-minimalist-ui/search-bar';
 
 import { ShowcaseComponent } from './showcase.component';
 import { ContainerComponent } from '../../components/container/container.component';
 import { ShowcaseRoutingModule } from './showcase-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ContainerComponent, ShowcaseComponent],
@@ -31,6 +33,8 @@ import { ShowcaseRoutingModule } from './showcase-routing.module';
     NgxMinimalistSmallFigureModule,
     ShowcaseRoutingModule,
     ProcessListModule,
+    SearchBarModule,
+    ReactiveFormsModule,
   ],
 })
 export class ShowcaseModule {}

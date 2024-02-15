@@ -1,6 +1,10 @@
 <div
   class="minimalist-checkbox"
+  tabindex="0"
+  role="checkbox"
+  #checkbox
   [ngClass]="{ 'minimalist-checkbox-active': value }"
+  (keydown.Space)="$event.preventDefault(); checkboxClicked()"
 >
   <div class="minimalist-checkbox-front" (click)="checkboxClicked()">
     <div class="minimalist-checkbox-front-left">

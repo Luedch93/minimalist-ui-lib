@@ -22,4 +22,37 @@ export class ProcessListComponent implements OnInit {
     this.idxSelected = idx;
     this.itemSelected.emit(this.infoList[idx]);
   }
+
+  handleNavigation(event: KeyboardEvent, idx: number) {
+    let targetIdx = 0;
+    if (event.code !== 'ArrowDown' && event.code !== 'ArrowUp') {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+
+    const el = event.target as HTMLElement;
+    const parentEl = el.closest('.minimalist-process-list');
+
+    el.blur();
+    if (event.code === 'ArrowUp') {
+      if (idx === 0) {
+        targetIdx = this.infoList.length - 1;
+      } else {
+        targetIdx = idx - 1;
+      }
+    }
+    if (event.code === 'ArrowDown') {
+      if (idx === this.infoList.length - 1) {
+        targetIdx = 0;
+      } else {
+        targetIdx = idx + 1;
+      }
+    }
+
+    const targetEl = parentEl?.querySelector(
+      `#minimalist-item-${targetIdx}`
+    ) as HTMLElement;
+    targetEl.focus();
+  }
 }

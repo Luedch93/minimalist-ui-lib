@@ -7,6 +7,7 @@ import {
   CheckboxItemEvent,
 } from 'ngx-minimalist-ui/checkbox-amount';
 import { Info } from 'ngx-minimalist-ui/process-list';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-showcase',
@@ -61,6 +62,9 @@ export class ShowcaseComponent implements OnInit {
       icon: 'gift',
     },
   ];
+  fg = new FormGroup({
+    search: new FormControl('', [Validators.required]),
+  });
 
   ngOnInit(): void {
     setTimeout(() => {

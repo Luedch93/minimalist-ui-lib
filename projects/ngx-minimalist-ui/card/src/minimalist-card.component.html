@@ -1,6 +1,12 @@
 <div class="minimalist-card">
   <div class="minimalist-card-front">
-    <div class="minimalist-card-header" (click)="headerClicked($event)">
+    <div
+      class="minimalist-card-header"
+      tabindex="0"
+      #header
+      (keydown.Enter)="header.click()"
+      (click)="headerClicked($event)"
+    >
       <ng-content select=".minimalist-card-header-content"></ng-content>
       @if (showHeaderIcon) {
       <i class="gg-chevron-right minimalist-card-header-logo"></i>

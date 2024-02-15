@@ -25,3 +25,35 @@
   display: block;
   z-index: -1;
 }
+
+@mixin reset-text-input() {
+  input {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+  }
+
+  input:focus {
+    outline: 0;
+  }
+
+  input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+  }
+
+  ::-webkit-search-decoration {
+    display: none;
+  }
+}

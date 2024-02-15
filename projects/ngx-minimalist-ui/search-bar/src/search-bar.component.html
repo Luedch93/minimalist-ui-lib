@@ -1,0 +1,23 @@
+<div class="minimalist-search-bar">
+  <div class="minimalist-search-bar-front" (click)="setCaretEnd()">
+    <search-icon></search-icon>
+    <div class="input-container">
+      <input
+        type="text"
+        name="search-input"
+        aria-label="search"
+        tabindex="-1"
+      />
+      <div
+        contenteditable
+        (input)="onChange($event)"
+        (keydown)="onKeyDown($event)"
+        (focus)="setCaretEnd()"
+        (blur)="markAsTouched()"
+        #fakeInput
+      ></div>
+      <span *ngIf="value === ''">Tracking Number</span>
+    </div>
+  </div>
+  <div class="minimalist-search-bar-back"></div>
+</div>

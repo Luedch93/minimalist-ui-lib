@@ -1,4 +1,10 @@
-<div class="minimalist-nav-button">
+<div
+  class="minimalist-nav-button"
+  tabindex="0"
+  role="button"
+  #button
+  (keydown.Enter)="onClick($event)"
+>
   <div class="minimalist-nav-button-front" (click)="onClick($event)">
     <ng-content></ng-content>
     <i class="minimalist-nav-button-front-icon gg-chevron-right"></i>

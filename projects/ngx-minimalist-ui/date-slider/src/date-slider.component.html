@@ -4,7 +4,11 @@
       @for(date of sliderDates$ | async; track date.monthDate) {
       <div
         class="minimalist-date-slider-front-slider-date"
+        tabindex="0"
+        role="button"
+        #tile
         [ngClass]="activeDate === date.monthDate ? 'active' : ''"
+        (keydown.Space)="$event.preventDefault(); handleClick(date)"
         (click)="handleClick(date)"
       >
         <div class="minimalist-date-slider-front-slider-date-value">

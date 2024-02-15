@@ -98,4 +98,14 @@
       ></lib-minimalist-process-list>
     </app-container>
   </section>
+
+  <section id="searchBar">
+    <app-container [title]="'Search Bar'">
+      <form [formGroup]="fg">
+        <lib-minimalist-search-bar
+          formControlName="search"
+        ></lib-minimalist-search-bar>
+      </form>
+    </app-container>
+  </section>
 </section>

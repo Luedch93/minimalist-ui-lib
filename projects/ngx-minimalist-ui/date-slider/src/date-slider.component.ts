@@ -1,12 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import {
-  NG_VALUE_ACCESSOR,
-  ControlValueAccessor,
-  AbstractControl,
-  ValidationErrors,
-  NG_VALIDATORS,
-  Validator,
-} from '@angular/forms';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 import { Observable } from 'rxjs';
 

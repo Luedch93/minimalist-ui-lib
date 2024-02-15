@@ -1,6 +1,12 @@
 <div class="minimalist-progressbar">
   @for (step of steps; track $index) {
-  <div class="minimalist-progressbar-item">
+  <div
+    class="minimalist-progressbar-item"
+    tabindex="0"
+    role="button"
+    #button
+    (keydown.Space)="$event.preventDefault(); onIconClick(step)"
+  >
     <i
       class="minimalist-progressbar-icon gg-check-o"
       [class.minimalist-progressbar-icon-complete]="isStepComplete(step)"

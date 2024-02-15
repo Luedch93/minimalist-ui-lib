@@ -1,6 +1,10 @@
 <div
   class="minimalist-button"
+  role="button"
+  tabindex="0"
+  #button
   [ngClass]="{ 'minimalist-button-disabled': disabled }"
+  (keydown.Enter)="button.click()"
 >
   <div class="minimalist-button-front">
     <ng-content></ng-content>
